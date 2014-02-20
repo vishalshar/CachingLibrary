@@ -3,13 +3,6 @@
 How to compile: The jar file is project file from Netbeans. After importing it to the IDE,
 LoginServiceImplementation class contains the main method with some test cases.
 
-from command prompt:
-compile 1) LoginService.Java
-		2) CacheLibrary.Java
-		3) FakeDBAccess.Java
-		4) LoginServiceImplementation.Java
-
-				
 How to run : main() method is in LoginServiceImplementation. We can run the code from there.
 It has few test cases. In this class there is a variable testing change it true to run the
 last test case. Last test case required some different configuration than other test cases.
@@ -71,16 +64,9 @@ A- Cache helps to avoid hitting DB for every query. Its like a small copy of
 DB in ur program which will help in answering most of the frequent queries.
 
 
-
-Q- Various usage patterns that make the cache more or less effective in terms of performance? 
-A-  Less Effective : When there are more insert queries than retrieve query. Because main 
-motive of cache is to reduce the access time from DB. Suppose calling UseJustLoggedIn 1000 times 
-and hasUserLoggedInWithin24 just once.
-
 More Effective: It will be very effective if the insert query are less and retrieve queries 
 are more. This will serve the purpose of the cache. Example calling hasUserLoggedInWithin24 1000
 times and calling UseJustLoggedIn 0 times.
-
 
 
 Q- Why the cache will be more effective under some scenarios and less effective under others.

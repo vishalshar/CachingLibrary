@@ -7,8 +7,6 @@ How to run : main() method is in LoginServiceImplementation. We can run the code
 It has few test cases. In this class there is a variable testing change it true to run the
 last test case. Last test case required some different configuration than other test cases.
 
-Q- Decisions:
-A-
 1) Why not Queue and Map in Cache:
 Using a ConcurrentLinkedQueue in cache could have reduced the O(n) 
 cost of adding to cache to O(1). Initially I was using queue to keep the
@@ -49,8 +47,7 @@ keeping methods of cache static so that it can be accessible from FakeDB class.
 
 
 
-Q- Reasons for implementing cache :
-A-
++ Reasons for implementing cache :
 1) speed and performance : By implementing cache we gain more speed in executing
 query thereby gaining performance in the application.
 2) better user experience : Better performance means faster and better user
@@ -67,12 +64,3 @@ DB in ur program which will help in answering most of the frequent queries.
 More Effective: It will be very effective if the insert query are less and retrieve queries 
 are more. This will serve the purpose of the cache. Example calling hasUserLoggedInWithin24 1000
 times and calling UseJustLoggedIn 0 times.
-
-
-Q- Why the cache will be more effective under some scenarios and less effective under others.
-A- Two scenarios explained above tells us in some condition cache can be very effective and 
-in some least effective. Cache reasons its very effective in second scenario is because it will
-reduce the number of time we get the results from DB. Getting the results from DB is an expensive
-task. Caching helps in reducing that cost.
-If cache is not used properly then it leads to inefficiency because then ur waiting space 
-and computation cost.

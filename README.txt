@@ -46,7 +46,6 @@ update to cache whenever we are updating the DB. That was the reason I choose
 keeping methods of cache static so that it can be accessible from FakeDB class.
 
 
-
 + Reasons for implementing cache :
 1) speed and performance : By implementing cache we gain more speed in executing
 query thereby gaining performance in the application.
@@ -55,11 +54,9 @@ experience.
 3) With cache we will be able to handle more traffic.
 
 
-
 Q- How does this cache improve performance:
 A- Cache helps to avoid hitting DB for every query. Its like a small copy of 
 DB in ur program which will help in answering most of the frequent queries.
-
 
 More Effective: It will be very effective if the insert query are less and retrieve queries 
 are more. This will serve the purpose of the cache. Example calling hasUserLoggedInWithin24 1000
